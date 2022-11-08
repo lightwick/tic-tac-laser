@@ -2,6 +2,7 @@ import cv2
 import os
 from image_processing import process_line
 
+# TODO: should figure out a way for url to be fixed, or auto configured
 url = "http://172.30.10.175:4747/mjpegfeed"
 
 def main():
@@ -14,6 +15,9 @@ def main():
     while True:
             # The shape of frame is (height: 480, width: 640, 3)
             frameExists, frame = cap.read()
+
+            # When using DroidCam, watermark is shown on top left.
+            # Lines of water mark are processed, thus to stop that, image is first cropped
             frame = frame[50:]
             if not frameExists:
                 print("no more incoming data.. aborting..")
