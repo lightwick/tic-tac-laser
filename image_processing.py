@@ -138,8 +138,9 @@ def get_strong_points(points, frame=None):
             idx = i+1
     first_res =  first_res[:point_count]
 
-    for point in first_res.astype(int):
-        cv2.circle(frame, point, 5, (255, 0, 0), 2)
+    if __debug__:
+        for point in first_res.astype(int):
+            cv2.circle(frame, point, 5, (255, 0, 0), 2)
 
     # SECOND HALF: single out points that are part of the edges of grid;
     # METHOD: check how many x and y coordinates are similar 
@@ -165,8 +166,10 @@ def get_strong_points(points, frame=None):
                     second_res[idx] = first_res[i]
                     idx+=1
                     break
-    for point in second_res.astype(int):
-        cv2.circle(frame, point, 5, (0, 0, 255), 2)
+    
+    if __debug__:
+        for point in second_res.astype(int):
+            cv2.circle(frame, point, 5, (0, 0, 255), 2)
     ##################### X coord FINISH #####################
     second_res = second_res[:idx]
     second_res = second_res[second_res[:,1].argsort()]
@@ -192,7 +195,7 @@ def get_strong_points(points, frame=None):
     ##################### Y coord FINISH #####################
     return res
 
-def harris_corner_detection(img, frame):
+def harris_corner_detection(img, frame=None):
     # to get a sense of how much a value is; debugging purposes
     cv2.rectangle(frame, (0, 0), (jump_thresh, jump_thresh), (0, 0, 255), 2)
 
@@ -221,8 +224,11 @@ def harris_corner_detection(img, frame):
     points = points[:idx]
 
     points = get_strong_points(points, frame).astype(int)
-    for point in points:
-        cv2.circle(frame, point, 5, (0, 255, 0), 2)
+    if __debug__:
+        for point in points:
+            cv2.circle(frame, point, 10, (0, 255, 0), 3)
+    
+    return points
     '''
     for j in range(0, dst.shape[0]):
         for i in range(0, dst.shape[1]):

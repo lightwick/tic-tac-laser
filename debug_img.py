@@ -10,10 +10,24 @@ img = cv2.imread("./grid.jpg")
 img = img[:800,:]
 img = ip.preprocessing(img)
 print(img.shape)
+res = np.zeros([15,2])
+
+def connect(img, points, idx_1, idx_2):
+    cv2.line(img, points[idx_1], points[idx_2], (0, 0, 255), 3, cv2.LINE_AA)
+
 while True:
     copy = np.copy(img)
-    ip.process_line(img, copy)
-    ip.harris_corner_detection(img, copy)
+    # ip.process_line(img, copy)
+    points = ip.harris_corner_detection(img, copy)
+    points = points[points[:,1].argsort()]
+
+    for i in range(4):
+        points[i*4:(i+1)*4] = points[points[i*4:(i+1)*4,0].argsort()+i*4]
+    
+    for i in range(4):
+        for j in range(3):
+            connect(copy, points, 4*i+j, 4*i+j+1)
+            connect(copy, points, 4*j+i, 4*(j+1)+i)
 
     cv2.imshow('hi', copy)
     #cv2.imshow('to hell',img)
