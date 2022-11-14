@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import os
 
+jump_thresh = 25
 
 def preprocessing(frame):
     frame = getBlackOnly(frame)
@@ -99,7 +100,6 @@ def get_strong_points(points, frame=None):
     # by default points are sorted by the x axis; due to method used in thresholding
     res = np.zeros([points.shape[0], 2])
     point_count = 0
-    jump_thresh = 30
     idx = 0
     # x_baseline = points[0][0]
     for i in range(len(points)):
@@ -108,11 +108,12 @@ def get_strong_points(points, frame=None):
         if i == len(points)-1 or points[i+1, 0]-points[i, 0] >= jump_thresh:
             # end_point is not included in the group
             end_point = min(i+1, len(points))
+            '''
             cv2.line(frame, (points[idx][0], 0),
                      (points[idx][0], 1000), (255, 255, 0), 2)
             cv2.line(frame, (points[end_point-1][0], 0),
                      (points[end_point-1][0], 1000), (255, 0, 0), 2)
-            print(end_point-idx+1)
+            '''
             if end_point-idx+1 <= 20:
                 idx = i+1
                 continue
@@ -138,7 +139,7 @@ def get_strong_points(points, frame=None):
 
 def harris_corner_detection(img, frame):
     # to get a sense of how much a value is; debugging purposes
-    cv2.rectangle(frame, (0, 0), (20, 20), (0, 0, 255), 2)
+    cv2.rectangle(frame, (0, 0), (jump_thresh, jump_thresh), (0, 0, 255), 2)
 
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     # find Harris corners
@@ -166,11 +167,11 @@ def harris_corner_detection(img, frame):
     points = points[:idx]
 
     for point in points:
-        cv2.circle(frame, point, 15, (255, 0, 0), 1)
+        cv2.circle(frame, point, 10, (255, 0, 0), 2)
 
     points = get_strong_points(points, frame).astype(int)
     for point in points:
-        cv2.circle(frame, point, 4, (0, 255, 0), 2)
+        cv2.circle(frame, point, 5, (0, 255, 0), 2)
     '''
     for j in range(0, dst.shape[0]):
         for i in range(0, dst.shape[1]):
