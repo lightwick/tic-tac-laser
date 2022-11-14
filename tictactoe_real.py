@@ -18,14 +18,11 @@ def main():
             # The shape of frame is (qheight: 480, width: 640, 3)
             frameExists, frame = cap.read()
 
-            # When using DroidCam, watermark is shown on top left.
-            # Lines of water mark are processed, thus to stop that, image is first cropped
             if not frameExists:
                 print("no more incoming data.. aborting..")
                 break
 
-            frame = image_processing.getBlackOnly(frame)
-            frame = cv2.cvtColor(frame, cv2.COLOR_GRAY2BGR)
+            frame = image_processing.preprocessing(frame)
             #frame[blackAndWhiteImage==0] = (0,0,255)
 
             copy = np.copy(frame)

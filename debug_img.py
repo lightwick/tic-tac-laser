@@ -1,11 +1,29 @@
 import cv2
 import numpy as np
+import image_processing as ip
 
 val = 80
 toggle = False
 
+img = cv2.imread("./grid.jpg")
+
+img = ip.preprocessing(img)
 while True:
-    img = cv2.imread("C:/projects/tictactoe_real/tic-tac-laser/gree.jpg")
+    copy = np.copy(img)
+    ip.process_line(img,copy)
+    ip.harris_corner_detection(img,copy)
+    
+    cv2.imshow('hi', copy)
+    cv2.imshow('to hell',img)
+    
+    key_input = cv2.waitKey(1)
+    if key_input==ord('q'):
+        break;
+    
+cv2.destroyAllWindows()
+'''
+while True:
+    img = cv2.cv2.imread("C:/projects/tictactoe_real/tic-tac-laser/grid.jpg")
     if toggle:
         grey = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         blur = cv2.GaussianBlur(grey, (5,5), 0)
@@ -55,3 +73,4 @@ while True:
         print(val)
     elif key_input == ord(' '):
         toggle = not toggle
+'''
