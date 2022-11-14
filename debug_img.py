@@ -6,8 +6,10 @@ val = 80
 toggle = False
 
 img = cv2.imread("./grid.jpg")
-
+# this to crop out dirty parts of white board
+img = img[:800,:]
 img = ip.preprocessing(img)
+print(img.shape)
 while True:
     copy = np.copy(img)
     ip.process_line(img, copy)

@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import os
 
-jump_thresh = 25
+jump_thresh = 20
 
 def preprocessing(frame):
     frame = getBlackOnly(frame)
@@ -97,8 +97,10 @@ def process_line(img, frame):
 
 
 def get_strong_points(points, frame=None):
+    # FIRST HALF: single out points with multiple detected points
+
     # by default points are sorted by the x axis; due to method used in thresholding
-    res = np.zeros([points.shape[0], 2])
+    first_res = np.zeros([points.shape[0], 2])
     point_count = 0
     idx = 0
     # x_baseline = points[0][0]
@@ -130,12 +132,65 @@ def get_strong_points(points, frame=None):
                             (points[i][0], 1000), (255, 0, 0), 2)
                     '''
                     mid_point = (int)((_idx+j)/2)
-                    res[point_count] = points[mid_point]
+                    first_res[point_count] = points[mid_point]
                     point_count += 1
                     _idx = j
             idx = i+1
-    return res[:point_count]
+    first_res =  first_res[:point_count]
 
+    for point in first_res.astype(int):
+        cv2.circle(frame, point, 5, (255, 0, 0), 2)
+
+    # SECOND HALF: single out points that are part of the edges of grid;
+    # METHOD: check how many x and y coordinates are similar 
+    # Because in a 3 by 3 grid within a square, a point should have 3 other points where x are similar and 3 other points where y are similar
+    sim_num_thresh = 3
+    sim_jump_thresh = 50
+
+    # filter small similar x size
+    first_res = first_res[first_res[:,0].argsort()]
+    second_res = np.zeros(first_res.shape)
+
+    idx = 0
+    for i in range(len(first_res)):
+        sim_count = 0
+        base_x = first_res[i][0]
+        for j in range(len(first_res)):
+            if i==j:
+                continue
+            else:
+                if abs(base_x-first_res[j][0])<=sim_jump_thresh:
+                    sim_count+=1
+                if sim_count>=sim_num_thresh:
+                    second_res[idx] = first_res[i]
+                    idx+=1
+                    break
+    for point in second_res.astype(int):
+        cv2.circle(frame, point, 5, (0, 0, 255), 2)
+    ##################### X coord FINISH #####################
+    second_res = second_res[:idx]
+    second_res = second_res[second_res[:,1].argsort()]
+
+    # filter small similar y size
+    res = np.zeros(second_res.shape)
+    idx = 0
+
+    for i in range(len(second_res)):
+        sim_count = 0
+        base_y = second_res[i][1]
+        for j in range(len(second_res)):
+            if i==j:
+                continue
+            else:
+                if abs(base_y-second_res[j][1])<=sim_jump_thresh:
+                    sim_count+=1
+                if sim_count>=sim_num_thresh:
+                    res[idx] = second_res[i]
+                    idx+=1
+                    break
+    res = res[:idx]
+    ##################### Y coord FINISH #####################
+    return res
 
 def harris_corner_detection(img, frame):
     # to get a sense of how much a value is; debugging purposes
@@ -148,7 +203,6 @@ def harris_corner_detection(img, frame):
 
     # honesty don't understand the significance of this
     blurred = np.float32(thresh_blur)
-
     dst = cv2.cornerHarris(blurred, 2, 3, 0.04)
     dst = cv2.dilate(dst, None)
 
@@ -165,9 +219,6 @@ def harris_corner_detection(img, frame):
                 idx += 1
 
     points = points[:idx]
-
-    for point in points:
-        cv2.circle(frame, point, 10, (255, 0, 0), 2)
 
     points = get_strong_points(points, frame).astype(int)
     for point in points:
