@@ -10,16 +10,16 @@ img = cv2.imread("./grid.jpg")
 img = ip.preprocessing(img)
 while True:
     copy = np.copy(img)
-    ip.process_line(img,copy)
-    ip.harris_corner_detection(img,copy)
-    
+    ip.process_line(img, copy)
+    ip.harris_corner_detection(img, copy)
+
     cv2.imshow('hi', copy)
-    cv2.imshow('to hell',img)
-    
+    #cv2.imshow('to hell',img)
+
     key_input = cv2.waitKey(1)
-    if key_input==ord('q'):
-        break;
-    
+    if key_input == ord('q'):
+        break
+
 cv2.destroyAllWindows()
 '''
 while True:
