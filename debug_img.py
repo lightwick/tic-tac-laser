@@ -1,13 +1,17 @@
 import cv2
 import numpy as np
 import image_processing as ip
+import imutils
 
 val = 80
 toggle = False
 
-img = cv2.imread("./grid.jpg")
-# this to crop out dirty parts of white board
+img = cv2.imread("./img/grid.jpg")
+##################### IMAGE SPECIFIC CODE #####################
 img = img[:800,:]
+#img = imutils.rotate(img, 3)
+##################### IMAGE SPECIFIC CODE #####################
+
 img = ip.preprocessing(img)
 print(img.shape)
 res = np.zeros([15,2])
@@ -15,20 +19,53 @@ res = np.zeros([15,2])
 def connect(img, points, idx_1, idx_2):
     cv2.line(img, points[idx_1], points[idx_2], (0, 0, 255), 3, cv2.LINE_AA)
 
-while True:
+# this is along the presupposition that the camera and the object on which the grid is drawn is stationary
+points = []
+while len(points)!=16:
     copy = np.copy(img)
     # ip.process_line(img, copy)
     points = ip.harris_corner_detection(img, copy)
-    points = points[points[:,1].argsort()]
+    cv2.imshow('hi', copy)
+    # TODO: changed parameters until grid is found
 
-    for i in range(4):
+print("found 16 points of grid")
+
+# drawing grid
+points = points[points[:,1].argsort()]
+
+for i in range(4):
         points[i*4:(i+1)*4] = points[points[i*4:(i+1)*4,0].argsort()+i*4]
-    
-    for i in range(4):
-        for j in range(3):
-            connect(copy, points, 4*i+j, 4*i+j+1)
-            connect(copy, points, 4*j+i, 4*(j+1)+i)
 
+for i in range(4):
+    for j in range(3):
+        connect(copy, points, 4*i+j, 4*i+j+1)
+        connect(copy, points, 4*j+i, 4*(j+1)+i)
+
+# grid draw end
+
+# parameters: 4 points of a trapezoid
+# returns: 2 points of a rectangle (upper_left, lower_right)
+def get_rectangle(upper_left, upper_right, lower_left, lower_right):
+    top_left_x = max(upper_left[0], lower_left[0])
+    top_left_y = max(upper_left[1], upper_right[1])
+    bottom_right_x = min(upper_right[0], lower_right[0])
+    bottom_right_y = min(lower_right[1], lower_left[1])
+
+    return ((top_left_x, top_left_y),(bottom_right_x, bottom_right_y))
+
+# 9 squares, 2 coordinates, x and y for each coordinate
+grid_rectangle = np.zeros([9,2,2]).astype(int)
+
+for i in range(3):
+    for j in range(3):
+        grid_rectangle[i*3+j] = get_rectangle(points[i*4+j], points[i*4+j+1], points[(i+1)*4+j], points[(i+1)*4+j+1])
+
+for point1, point2 in grid_rectangle:
+    cv2.rectangle(copy, point1, point2, (200, 200, 0), 2)
+
+cv2.imwrite('img/rectangle_in_grid.png', copy)
+
+while True:
     cv2.imshow('hi', copy)
     #cv2.imshow('to hell',img)
 
