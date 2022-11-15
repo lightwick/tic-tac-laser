@@ -209,8 +209,8 @@ def harris_corner_detection(img, frame=None):
     dst = cv2.cornerHarris(blurred, 2, 3, 0.04)
     dst = cv2.dilate(dst, None)
 
-    thresh = 0.6*dst.max()
-    points = np.zeros([dst.shape[0], 2]).astype(int)
+    thresh = 0.4*dst.max()
+    points = np.zeros([dst.shape[0]*dst.shape[1], 2]).astype(int)
     idx = 0
 
     # Iterate through all the corners and draw them on the image (if they pass the threshold)

@@ -65,6 +65,12 @@ for point1, point2 in grid_rectangle:
 
 cv2.imwrite('img/rectangle_in_grid.png', copy)
 
+img1 = cv2.imread("img/action_3.jpg")
+img2 = cv2.imread("img/action_4.jpg")
+
+_img = abs(img2-img1)
+cv2.imshow('d',_img)
+
 while True:
     cv2.imshow('hi', copy)
     #cv2.imshow('to hell',img)
