@@ -1,0 +1,1213 @@
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+WARNING:tensorflow:Calling GradientTape.gradient on a persistent tape inside its context is significantly less efficient than calling it outside the context (it causes the gradient ops to be recorded on the tape, leading to increased CPU and memory usage). Only call GradientTape.gradient inside the context if you actually want to trace the gradient in order to compute higher order derivatives.
+running reward: 0.00 at episode 250
+142 91 59 292
+48.63013698630137
+running reward: 0.00 at episode 500
+138 92 57 287
+48.08362369337979
+running reward: 0.00 at episode 750
+134 95 51 280
+47.85714285714286
+running reward: 0.00 at episode 1000
+141 48 54 243
+58.0246913580247
+running reward: 0.00 at episode 1250
+128 70 31 229
+55.895196506550214
+running reward: 0.00 at episode 1500
+115 28 24 167
+68.8622754491018
+running reward: 0.00 at episode 1750
+113 47 20 180
+62.77777777777778
+running reward: 0.00 at episode 2000
+135 47 36 218
+61.92660550458715
+running reward: 0.00 at episode 2250
+115 34 34 183
+62.841530054644814
+running reward: 0.00 at episode 2500
+143 96 64 303
+47.194719471947195
+running reward: 0.00 at episode 2750
+151 33 55 239
+63.17991631799163
+running reward: 0.00 at episode 3000
+149 31 36 216
+68.98148148148148
+running reward: 0.00 at episode 3250
+127 145 16 288
+44.09722222222222
+running reward: 0.00 at episode 3500
+88 51 17 156
+56.41025641025641
+running reward: 0.00 at episode 3750
+123 58 22 203
+60.591133004926114
+running reward: 0.00 at episode 4000
+134 76 28 238
+56.30252100840336
+running reward: 0.00 at episode 4250
+120 87 42 249
+48.19277108433735
+running reward: 0.00 at episode 4500
+160 54 46 260
+61.53846153846154
+running reward: 0.00 at episode 4750
+139 62 69 270
+51.48148148148148
+running reward: 0.00 at episode 5000
+132 58 19 209
+63.1578947368421
+running reward: 0.00 at episode 5250
+116 21 11 148
+78.37837837837837
+running reward: 0.00 at episode 5500
+100 26 15 141
+70.92198581560284
+running reward: 0.00 at episode 5750
+130 52 31 213
+61.03286384976526
+running reward: 0.00 at episode 6000
+118 55 40 213
+55.39906103286385
+running reward: 0.00 at episode 6250
+136 50 23 209
+65.07177033492823
+running reward: 0.00 at episode 6500
+139 41 43 223
+62.33183856502242
+running reward: 0.00 at episode 6750
+118 39 25 182
+64.83516483516483
+running reward: 0.00 at episode 7000
+124 75 19 218
+56.88073394495413
+running reward: 0.00 at episode 7250
+161 64 14 239
+67.36401673640168
+running reward: 0.00 at episode 7500
+128 38 14 180
+71.11111111111111
+running reward: 0.00 at episode 7750
+137 23 24 184
+74.45652173913044
+running reward: 0.00 at episode 8000
+125 27 19 171
+73.09941520467837
+running reward: 0.00 at episode 8250
+144 28 22 194
+74.22680412371135
+running reward: 0.00 at episode 8500
+130 24 24 178
+73.03370786516854
+running reward: 0.00 at episode 8750
+132 103 39 274
+48.175182481751825
+running reward: 0.00 at episode 9000
+136 51 49 236
+57.6271186440678
+running reward: 0.00 at episode 9250
+127 47 51 225
+56.44444444444444
+running reward: 0.00 at episode 9500
+132 49 8 189
+69.84126984126983
+running reward: 0.00 at episode 9750
+132 27 19 178
+74.15730337078652
+running reward: 0.00 at episode 10000
+126 23 13 162
+77.77777777777779
+running reward: 0.00 at episode 10250
+107 19 11 137
+78.1021897810219
+running reward: 0.00 at episode 10500
+112 23 16 151
+74.17218543046357
+running reward: 0.00 at episode 10750
+107 19 15 141
+75.88652482269504
+running reward: 0.00 at episode 11000
+101 23 15 139
+72.66187050359713
+running reward: 0.00 at episode 11250
+105 22 15 142
+73.94366197183099
+running reward: 0.00 at episode 11500
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+101 14 11 126
+80.15873015873017
+running reward: 0.00 at episode 11750
+101 15 11 127
+79.52755905511812
+running reward: 0.00 at episode 12000
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+102 21 4 127
+80.31496062992126
+running reward: 0.00 at episode 12250
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+97 16 6 119
+81.5126050420168
+running reward: 0.00 at episode 12500
+93 17 6 116
+80.17241379310344
+running reward: 0.00 at episode 12750
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+96 11 5 112
+85.71428571428571
+running reward: 0.00 at episode 13000
+103 11 8 122
+84.42622950819673
+running reward: 0.00 at episode 13250
+96 13 5 114
+84.21052631578947
+running reward: 0.00 at episode 13500
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+98 11 4 113
+86.72566371681415
+running reward: 0.00 at episode 13750
+106 20 6 132
+80.3030303030303
+running reward: 0.00 at episode 14000
+96 13 6 115
+83.47826086956522
+running reward: 0.00 at episode 14250
+108 16 18 142
+76.05633802816901
+running reward: 0.00 at episode 14500
+99 11 8 118
+83.89830508474576
+running reward: 0.00 at episode 14750
+98 22 5 125
+78.4
+running reward: 0.00 at episode 15000
+106 21 9 136
+77.94117647058823
+running reward: 0.00 at episode 15250
+107 18 6 131
+81.67938931297711
+running reward: 0.00 at episode 15500
+93 12 7 112
+83.03571428571429
+running reward: 0.00 at episode 15750
+110 10 8 128
+85.9375
+running reward: 0.00 at episode 16000
+106 9 9 124
+85.48387096774194
+running reward: 0.00 at episode 16250
+92 10 8 110
+83.63636363636363
+running reward: 0.00 at episode 16500
+103 15 14 132
+78.03030303030303
+running reward: 0.00 at episode 16750
+102 8 15 125
+81.6
+running reward: 0.00 at episode 17000
+156 57 42 255
+61.1764705882353
+running reward: 0.00 at episode 17250
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+92 9 5 106
+86.79245283018868
+running reward: 0.00 at episode 17500
+104 9 7 120
+86.66666666666667
+running reward: 0.00 at episode 17750
+105 18 2 125
+84.0
+running reward: 0.00 at episode 18000
+99 19 3 121
+81.81818181818183
+running reward: 0.00 at episode 18250
+104 25 7 136
+76.47058823529412
+running reward: 0.00 at episode 18500
+114 14 9 137
+83.21167883211679
+running reward: 0.00 at episode 18750
+144 34 13 191
+75.39267015706807
+running reward: 0.00 at episode 19000
+108 21 9 138
+78.26086956521739
+running reward: 0.00 at episode 19250
+117 14 12 143
+81.81818181818183
+running reward: 0.00 at episode 19500
+112 30 16 158
+70.88607594936708
+running reward: 0.00 at episode 19750
+108 31 13 152
+71.05263157894737
+running reward: 0.00 at episode 20000
+132 33 13 178
+74.15730337078652
+running reward: 0.00 at episode 20250
+131 30 13 174
+75.28735632183908
+running reward: 0.00 at episode 20500
+124 34 14 172
+72.09302325581395
+running reward: 0.00 at episode 20750
+114 34 11 159
+71.69811320754717
+running reward: 0.00 at episode 21000
+127 48 12 187
+67.9144385026738
+running reward: 0.00 at episode 21250
+132 30 20 182
+72.52747252747253
+running reward: 0.00 at episode 21500
+145 71 36 252
+57.53968253968254
+running reward: 0.00 at episode 21750
+131 51 12 194
+67.5257731958763
+running reward: 0.00 at episode 22000
+108 22 18 148
+72.97297297297297
+running reward: 0.00 at episode 22250
+110 22 14 146
+75.34246575342466
+running reward: 0.00 at episode 22500
+113 23 12 148
+76.35135135135135
+running reward: 0.00 at episode 22750
+118 14 19 151
+78.1456953642384
+running reward: 0.00 at episode 23000
+142 36 16 194
+73.19587628865979
+running reward: 0.00 at episode 23250
+139 34 16 189
+73.54497354497354
+running reward: 0.00 at episode 23500
+128 36 12 176
+72.72727272727273
+running reward: 0.00 at episode 23750
+133 41 13 187
+71.12299465240642
+running reward: 0.00 at episode 24000
+131 18 10 159
+82.38993710691824
+running reward: 0.00 at episode 24250
+137 23 19 179
+76.53631284916202
+running reward: 0.00 at episode 24500
+142 29 20 191
+74.3455497382199
+running reward: 0.00 at episode 24750
+159 42 27 228
+69.73684210526315
+running reward: 0.00 at episode 25000
+139 20 14 173
+80.34682080924856
+running reward: 0.00 at episode 25250
+137 29 13 179
+76.53631284916202
+running reward: 0.00 at episode 25500
+120 13 11 144
+83.33333333333334
+running reward: 0.00 at episode 25750
+128 20 15 163
+78.52760736196319
+running reward: 0.00 at episode 26000
+112 27 13 152
+73.68421052631578
+running reward: 0.00 at episode 26250
+123 21 11 155
+79.35483870967742
+running reward: 0.00 at episode 26500
+141 21 18 180
+78.33333333333333
+running reward: 0.00 at episode 26750
+129 22 20 171
+75.43859649122807
+running reward: 0.00 at episode 27000
+129 27 20 176
+73.29545454545455
+running reward: 0.00 at episode 27250
+119 18 16 153
+77.77777777777779
+running reward: 0.00 at episode 27500
+127 39 13 179
+70.94972067039106
+running reward: 0.00 at episode 27750
+114 22 18 154
+74.02597402597402
+running reward: 0.00 at episode 28000
+128 93 17 238
+53.78151260504202
+running reward: 0.00 at episode 28250
+123 20 15 158
+77.84810126582279
+running reward: 0.00 at episode 28500
+128 24 16 168
+76.19047619047619
+running reward: 0.00 at episode 28750
+131 21 15 167
+78.44311377245509
+running reward: 0.00 at episode 29000
+119 27 19 165
+72.12121212121212
+running reward: 0.00 at episode 29250
+118 54 20 192
+61.458333333333336
+running reward: 0.00 at episode 29500
+134 43 10 187
+71.65775401069519
+running reward: 0.00 at episode 29750
+124 35 4 163
+76.07361963190185
+running reward: 0.00 at episode 30000
+126 33 18 177
+71.1864406779661
+running reward: 0.00 at episode 30250
+117 27 12 156
+75.0
+running reward: 0.00 at episode 30500
+127 24 14 165
+76.96969696969697
+running reward: 0.00 at episode 30750
+118 18 12 148
+79.72972972972973
+running reward: 0.00 at episode 31000
+128 16 6 150
+85.33333333333334
+running reward: 0.00 at episode 31250
+138 27 17 182
+75.82417582417582
+running reward: 0.00 at episode 31500
+124 36 8 168
+73.80952380952381
+running reward: 0.00 at episode 31750
+132 24 33 189
+69.84126984126983
+running reward: 0.00 at episode 32000
+125 18 28 171
+73.09941520467837
+running reward: 0.00 at episode 32250
+126 24 22 172
+73.25581395348837
+running reward: 0.00 at episode 32500
+136 37 28 201
+67.66169154228857
+running reward: 0.00 at episode 32750
+115 16 29 160
+71.875
+running reward: 0.00 at episode 33000
+125 14 34 173
+72.25433526011561
+running reward: 0.00 at episode 33250
+123 15 29 167
+73.65269461077844
+running reward: 0.00 at episode 33500
+128 32 22 182
+70.32967032967034
+running reward: 0.00 at episode 33750
+133 20 26 179
+74.30167597765363
+running reward: 0.00 at episode 34000
+142 22 32 196
+72.44897959183673
+running reward: 0.00 at episode 34250
+145 40 30 215
+67.44186046511628
+running reward: 0.00 at episode 34500
+126 36 20 182
+69.23076923076923
+running reward: 0.00 at episode 34750
+124 44 20 188
+65.95744680851064
+running reward: 0.00 at episode 35000
+143 34 22 199
+71.85929648241206
+running reward: 0.00 at episode 35250
+127 24 24 175
+72.57142857142857
+running reward: 0.00 at episode 35500
+130 38 14 182
+71.42857142857143
+running reward: 0.00 at episode 35750
+111 16 9 136
+81.61764705882352
+running reward: 0.00 at episode 36000
+114 14 15 143
+79.72027972027972
+running reward: 0.00 at episode 36250
+120 22 26 168
+71.42857142857143
+running reward: 0.00 at episode 36500
+114 29 15 158
+72.15189873417721
+running reward: 0.00 at episode 36750
+120 18 19 157
+76.43312101910828
+running reward: 0.00 at episode 37000
+115 26 19 160
+71.875
+running reward: 0.00 at episode 37250
+120 23 19 162
+74.07407407407408
+running reward: 0.00 at episode 37500
+114 28 16 158
+72.15189873417721
+running reward: 0.00 at episode 37750
+112 24 16 152
+73.68421052631578
+running reward: 0.00 at episode 38000
+129 32 14 175
+73.71428571428571
+running reward: 0.00 at episode 38250
+131 30 14 175
+74.85714285714286
+running reward: 0.00 at episode 38500
+129 25 15 169
+76.33136094674556
+running reward: 0.00 at episode 38750
+133 17 17 167
+79.64071856287424
+running reward: 0.00 at episode 39000
+125 9 20 154
+81.16883116883116
+running reward: 0.00 at episode 39250
+119 14 27 160
+74.375
+running reward: 0.00 at episode 39500
+128 9 24 161
+79.5031055900621
+running reward: 0.00 at episode 39750
+119 14 19 152
+78.28947368421053
+running reward: 0.00 at episode 40000
+129 26 18 173
+74.56647398843931
+running reward: 0.00 at episode 40250
+124 16 16 156
+79.48717948717949
+running reward: 0.00 at episode 40500
+124 13 25 162
+76.5432098765432
+running reward: 0.00 at episode 40750
+130 18 27 175
+74.28571428571429
+running reward: 0.00 at episode 41000
+126 19 27 172
+73.25581395348837
+running reward: 0.00 at episode 41250
+119 18 28 165
+72.12121212121212
+running reward: 0.00 at episode 41500
+129 20 26 175
+73.71428571428571
+running reward: 0.00 at episode 41750
+136 15 19 170
+80.0
+running reward: 0.00 at episode 42000
+131 16 15 162
+80.8641975308642
+running reward: 0.00 at episode 42250
+144 24 25 193
+74.61139896373057
+running reward: 0.00 at episode 42500
+141 10 21 172
+81.97674418604652
+running reward: 0.00 at episode 42750
+129 12 20 161
+80.12422360248446
+running reward: 0.00 at episode 43000
+135 13 14 162
+83.33333333333334
+running reward: 0.00 at episode 43250
+123 10 12 145
+84.82758620689656
+running reward: 0.00 at episode 43500
+122 8 18 148
+82.43243243243244
+running reward: 0.00 at episode 43750
+120 8 15 143
+83.91608391608392
+running reward: 0.00 at episode 44000
+127 8 13 148
+85.8108108108108
+running reward: 0.00 at episode 44250
+125 6 14 145
+86.20689655172413
+running reward: 0.00 at episode 44500
+116 6 19 141
+82.26950354609929
+running reward: 0.00 at episode 44750
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+131 5 13 149
+87.91946308724832
+running reward: 0.00 at episode 45000
+128 4 15 147
+87.07482993197279
+running reward: 0.00 at episode 45250
+131 8 22 161
+81.36645962732919
+running reward: 0.00 at episode 45500
+124 4 20 148
+83.78378378378379
+running reward: 0.00 at episode 45750
+115 7 15 137
+83.94160583941606
+running reward: 0.00 at episode 46000
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+127 3 12 142
+89.43661971830986
+running reward: 0.00 at episode 46250
+123 5 13 141
+87.2340425531915
+running reward: 0.00 at episode 46500
+129 9 15 153
+84.31372549019608
+running reward: 0.00 at episode 46750
+125 11 15 151
+82.78145695364239
+running reward: 0.00 at episode 47000
+125 13 21 159
+78.61635220125787
+running reward: 0.00 at episode 47250
+125 10 17 152
+82.23684210526315
+running reward: 0.00 at episode 47500
+120 8 16 144
+83.33333333333334
+running reward: 0.00 at episode 47750
+133 10 15 158
+84.17721518987342
+running reward: 0.00 at episode 48000
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+119 5 9 133
+89.47368421052632
+running reward: 0.00 at episode 48250
+116 6 13 135
+85.92592592592592
+running reward: 0.00 at episode 48500
+118 9 14 141
+83.68794326241135
+running reward: 0.00 at episode 48750
+121 6 17 144
+84.02777777777779
+running reward: 0.00 at episode 49000
+110 6 11 127
+86.61417322834646
+running reward: 0.00 at episode 49250
+124 3 13 140
+88.57142857142857
+running reward: 0.00 at episode 49500
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+124 1 9 134
+92.53731343283582
+running reward: 0.00 at episode 49750
+122 3 9 134
+91.04477611940298
+running reward: 0.00 at episode 50000
+139 3 13 155
+89.6774193548387
+running reward: 0.00 at episode 50250
+138 5 16 159
+86.79245283018868
+running reward: 0.00 at episode 50500
+126 15 16 157
+80.2547770700637
+running reward: 0.00 at episode 50750
+119 8 9 136
+87.5
+running reward: 0.00 at episode 51000
+122 8 18 148
+82.43243243243244
+running reward: 0.00 at episode 51250
+117 7 18 142
+82.3943661971831
+running reward: 0.00 at episode 51500
+120 8 13 141
+85.1063829787234
+running reward: 0.00 at episode 51750
+124 7 14 145
+85.51724137931035
+running reward: 0.00 at episode 52000
+127 9 20 156
+81.41025641025641
+running reward: 0.00 at episode 52250
+118 12 21 151
+78.1456953642384
+running reward: 0.00 at episode 52500
+116 7 18 141
+82.26950354609929
+running reward: 0.00 at episode 52750
+118 3 15 136
+86.76470588235294
+running reward: 0.00 at episode 53000
+108 7 17 132
+81.81818181818183
+running reward: 0.00 at episode 53250
+127 8 24 159
+79.87421383647799
+running reward: 0.00 at episode 53500
+129 7 15 151
+85.43046357615894
+running reward: 0.00 at episode 53750
+118 9 26 153
+77.12418300653596
+running reward: 0.00 at episode 54000
+117 6 19 142
+82.3943661971831
+running reward: 0.00 at episode 54250
+140 11 32 183
+76.50273224043715
+running reward: 0.00 at episode 54500
+136 6 21 163
+83.43558282208589
+running reward: 0.00 at episode 54750
+116 8 20 144
+80.55555555555556
+running reward: 0.00 at episode 55000
+112 1 20 133
+84.21052631578947
+running reward: 0.00 at episode 55250
+131 9 21 161
+81.36645962732919
+running reward: 0.00 at episode 55500
+141 4 25 170
+82.94117647058825
+running reward: 0.00 at episode 55750
+102 3 17 122
+83.60655737704919
+running reward: 0.00 at episode 56000
+104 4 11 119
+87.39495798319328
+running reward: 0.00 at episode 56250
+102 8 13 123
+82.92682926829268
+running reward: 0.00 at episode 56500
+102 9 13 124
+82.25806451612904
+running reward: 0.00 at episode 56750
+120 6 14 140
+85.71428571428571
+running reward: 0.00 at episode 57000
+107 4 16 127
+84.25196850393701
+running reward: 0.00 at episode 57250
+115 6 12 133
+86.46616541353383
+running reward: 0.00 at episode 57500
+108 8 17 133
+81.203007518797
+running reward: 0.00 at episode 57750
+107 8 17 132
+81.06060606060606
+running reward: 0.00 at episode 58000
+103 4 10 117
+88.03418803418803
+running reward: 0.00 at episode 58250
+105 3 11 119
+88.23529411764706
+running reward: 0.00 at episode 58500
+111 15 14 140
+79.28571428571428
+running reward: 0.00 at episode 58750
+115 8 13 136
+84.55882352941177
+running reward: 0.00 at episode 59000
+116 7 17 140
+82.85714285714286
+running reward: 0.00 at episode 59250
+108 6 11 125
+86.4
+running reward: 0.00 at episode 59500
+112 9 17 138
+81.15942028985508
+running reward: 0.00 at episode 59750
+105 5 15 125
+84.0
+running reward: 0.00 at episode 60000
+106 6 13 125
+84.8
+running reward: 0.00 at episode 60250
+112 3 7 122
+91.80327868852459
+running reward: 0.00 at episode 60500
+110 4 8 122
+90.1639344262295
+running reward: 0.00 at episode 60750
+114 10 13 137
+83.21167883211679
+running reward: 0.00 at episode 61000
+108 3 9 120
+90.0
+running reward: 0.00 at episode 61250
+110 11 13 134
+82.08955223880598
+running reward: 0.00 at episode 61500
+115 6 14 135
+85.18518518518519
+running reward: 0.00 at episode 61750
+113 6 16 135
+83.7037037037037
+running reward: 0.00 at episode 62000
+107 5 14 126
+84.92063492063492
+running reward: 0.00 at episode 62250
+107 6 11 124
+86.29032258064517
+running reward: 0.00 at episode 62500
+117 9 17 143
+81.81818181818183
+running reward: 0.00 at episode 62750
+106 8 12 126
+84.12698412698413
+running reward: 0.00 at episode 63000
+109 5 12 126
+86.5079365079365
+running reward: 0.00 at episode 63250
+118 6 14 138
+85.5072463768116
+running reward: 0.00 at episode 63500
+118 9 13 140
+84.28571428571429
+running reward: 0.00 at episode 63750
+116 10 16 142
+81.69014084507043
+running reward: 0.00 at episode 64000
+101 6 10 117
+86.32478632478633
+running reward: 0.00 at episode 64250
+92 8 11 111
+82.88288288288288
+running reward: 0.00 at episode 64500
+120 57 35 212
+56.60377358490566
+running reward: 0.00 at episode 64750
+120 9 23 152
+78.94736842105263
+running reward: 0.00 at episode 65000
+104 8 27 139
+74.82014388489209
+running reward: 0.00 at episode 65250
+117 52 22 191
+61.25654450261781
+running reward: 0.00 at episode 65500
+110 8 16 134
+82.08955223880598
+running reward: 0.00 at episode 65750
+109 6 17 132
+82.57575757575758
+running reward: 0.00 at episode 66000
+109 5 15 129
+84.49612403100775
+running reward: 0.00 at episode 66250
+115 4 16 135
+85.18518518518519
+running reward: 0.00 at episode 66500
+116 4 17 137
+84.67153284671532
+running reward: 0.00 at episode 66750
+111 5 14 130
+85.38461538461539
+running reward: 0.00 at episode 67000
+115 5 18 138
+83.33333333333334
+running reward: 0.00 at episode 67250
+112 5 15 132
+84.84848484848484
+running reward: 0.00 at episode 67500
+97 8 18 123
+78.86178861788618
+running reward: 0.00 at episode 67750
+104 4 18 126
+82.53968253968253
+running reward: 0.00 at episode 68000
+102 3 17 122
+83.60655737704919
+running reward: 0.00 at episode 68250
+103 7 17 127
+81.10236220472441
+running reward: 0.00 at episode 68500
+100 7 17 124
+80.64516129032258
+running reward: 0.00 at episode 68750
+104 9 19 132
+78.78787878787878
+running reward: 0.00 at episode 69000
+102 8 14 124
+82.25806451612904
+running reward: 0.00 at episode 69250
+101 8 15 124
+81.45161290322581
+running reward: 0.00 at episode 69500
+107 12 20 139
+76.97841726618705
+running reward: 0.00 at episode 69750
+107 11 18 136
+78.67647058823529
+running reward: 0.00 at episode 70000
+110 11 25 146
+75.34246575342466
+running reward: 0.00 at episode 70250
+103 7 13 123
+83.73983739837398
+running reward: 0.00 at episode 70500
+106 7 17 130
+81.53846153846153
+running reward: 0.00 at episode 70750
+110 7 13 130
+84.61538461538461
+running reward: 0.00 at episode 71000
+110 8 14 132
+83.33333333333334
+running reward: 0.00 at episode 71250
+106 4 15 125
+84.8
+running reward: 0.00 at episode 71500
+103 2 16 121
+85.12396694214877
+running reward: 0.00 at episode 71750
+102 7 16 125
+81.6
+running reward: 0.00 at episode 72000
+111 5 16 132
+84.0909090909091
+running reward: 0.00 at episode 72250
+111 9 16 136
+81.61764705882352
+running reward: 0.00 at episode 72500
+112 9 11 132
+84.84848484848484
+running reward: 0.00 at episode 72750
+111 7 12 130
+85.38461538461539
+running reward: 0.00 at episode 73000
+96 7 9 112
+85.71428571428571
+running reward: 0.00 at episode 73250
+92 5 10 107
+85.98130841121495
+running reward: 0.00 at episode 73500
+106 13 16 135
+78.51851851851852
+running reward: 0.00 at episode 73750
+116 14 20 150
+77.33333333333333
+running reward: 0.00 at episode 74000
+97 10 16 123
+78.86178861788618
+running reward: 0.00 at episode 74250
+121 12 16 149
+81.20805369127517
+running reward: 0.00 at episode 74500
+122 17 21 160
+76.25
+running reward: 0.00 at episode 74750
+120 10 24 154
+77.92207792207793
+running reward: 0.00 at episode 75000
+108 6 22 136
+79.41176470588235
+running reward: 0.00 at episode 75250
+103 6 16 125
+82.39999999999999
+running reward: 0.00 at episode 75500
+99 6 18 123
+80.48780487804879
+running reward: 0.00 at episode 75750
+102 2 15 119
+85.71428571428571
+running reward: 0.00 at episode 76000
+101 4 17 122
+82.78688524590164
+running reward: 0.00 at episode 76250
+99 1 18 118
+83.89830508474576
+running reward: 0.00 at episode 76500
+100 1 16 117
+85.47008547008546
+running reward: 0.00 at episode 76750
+94 1 10 105
+89.52380952380953
+running reward: 0.00 at episode 77000
+97 4 15 116
+83.62068965517241
+running reward: 0.00 at episode 77250
+95 2 14 111
+85.58558558558559
+running reward: 0.00 at episode 77500
+94 1 15 110
+85.45454545454545
+running reward: 0.00 at episode 77750
+97 3 13 113
+85.84070796460178
+running reward: 0.00 at episode 78000
+94 2 12 108
+87.03703703703704
+running reward: 0.00 at episode 78250
+95 2 12 109
+87.1559633027523
+running reward: 0.00 at episode 78500
+96 2 13 111
+86.48648648648648
+running reward: 0.00 at episode 78750
+97 4 12 113
+85.84070796460178
+running reward: 0.00 at episode 79000
+95 5 9 109
+87.1559633027523
+running reward: 0.00 at episode 79250
+94 2 12 108
+87.03703703703704
+running reward: 0.00 at episode 79500
+97 5 12 114
+85.08771929824562
+running reward: 0.00 at episode 79750
+97 5 14 116
+83.62068965517241
+running reward: 0.00 at episode 80000
+97 6 14 117
+82.90598290598291
+running reward: 0.00 at episode 80250
+92 4 14 110
+83.63636363636363
+running reward: 0.00 at episode 80500
+94 4 13 111
+84.68468468468468
+running reward: 0.00 at episode 80750
+108 3 12 123
+87.8048780487805
+running reward: 0.00 at episode 81000
+105 3 14 122
+86.0655737704918
+running reward: 0.00 at episode 81250
+101 1 11 113
+89.38053097345133
+running reward: 0.00 at episode 81500
+101 1 13 115
+87.82608695652175
+running reward: 0.00 at episode 81750
+101 2 13 116
+87.06896551724138
+running reward: 0.00 at episode 82000
+95 2 11 108
+87.96296296296296
+running reward: 0.00 at episode 82250
+95 2 12 109
+87.1559633027523
+running reward: 0.00 at episode 82500
+94 1 12 107
+87.85046728971963
+running reward: 0.00 at episode 82750
+98 1 11 110
+89.0909090909091
+running reward: 0.00 at episode 83000
+101 5 14 120
+84.16666666666667
+running reward: 0.00 at episode 83250
+98 3 13 114
+85.96491228070175
+running reward: 0.00 at episode 83500
+94 1 10 105
+89.52380952380953
+running reward: 0.00 at episode 83750
+97 2 11 110
+88.18181818181819
+running reward: 0.00 at episode 84000
+91 2 11 104
+87.5
+running reward: 0.00 at episode 84250
+92 2 10 104
+88.46153846153845
+running reward: 0.00 at episode 84500
+97 3 13 113
+85.84070796460178
+running reward: 0.00 at episode 84750
+90 5 9 104
+86.53846153846155
+running reward: 0.00 at episode 85000
+95 4 6 105
+90.47619047619048
+running reward: 0.00 at episode 85250
+108 10 14 132
+81.81818181818183
+running reward: 0.00 at episode 85500
+94 8 10 112
+83.92857142857143
+running reward: 0.00 at episode 85750
+106 5 12 123
+86.1788617886179
+running reward: 0.00 at episode 86000
+106 5 9 120
+88.33333333333333
+running reward: 0.00 at episode 86250
+104 9 12 125
+83.2
+running reward: 0.00 at episode 86500
+101 10 13 124
+81.45161290322581
+running reward: 0.00 at episode 86750
+91 4 12 107
+85.04672897196261
+running reward: 0.00 at episode 87000
+89 4 13 106
+83.9622641509434
+running reward: 0.00 at episode 87250
+91 8 23 122
+74.59016393442623
+running reward: 0.00 at episode 87500
+92 4 15 111
+82.88288288288288
+running reward: 0.00 at episode 87750
+89 3 15 107
+83.17757009345794
+running reward: 0.00 at episode 88000
+104 3 11 118
+88.13559322033898
+running reward: 0.00 at episode 88250
+99 6 13 118
+83.89830508474576
+running reward: 0.00 at episode 88500
+103 7 16 126
+81.74603174603175
+running reward: 0.00 at episode 88750
+104 6 12 122
+85.24590163934425
+running reward: 0.00 at episode 89000
+96 8 13 117
+82.05128205128204
+running reward: 0.00 at episode 89250
+94 6 11 111
+84.68468468468468
+running reward: 0.00 at episode 89500
+88 4 11 103
+85.43689320388349
+running reward: 0.00 at episode 89750
+100 7 13 120
+83.33333333333334
+running reward: 0.00 at episode 90000
+88 5 14 107
+82.2429906542056
+running reward: 0.00 at episode 90250
+92 5 12 109
+84.40366972477065
+running reward: 0.00 at episode 90500
+91 5 10 106
+85.84905660377359
+running reward: 0.00 at episode 90750
+110 5 11 126
+87.3015873015873
+running reward: 0.00 at episode 91000
+95 6 8 109
+87.1559633027523
+running reward: 0.00 at episode 91250
+84 3 12 99
+84.84848484848484
+running reward: 0.00 at episode 91500
+98 9 17 124
+79.03225806451613
+running reward: 0.00 at episode 91750
+95 3 13 111
+85.58558558558559
+running reward: 0.00 at episode 92000
+91 3 12 106
+85.84905660377359
+running reward: 0.00 at episode 92250
+88 3 16 107
+82.2429906542056
+running reward: 0.00 at episode 92500
+98 2 10 110
+89.0909090909091
+running reward: 0.00 at episode 92750
+114 7 12 133
+85.71428571428571
+running reward: 0.00 at episode 93000
+96 5 13 114
+84.21052631578947
+running reward: 0.00 at episode 93250
+100 7 18 125
+80.0
+running reward: 0.00 at episode 93500
+103 11 16 130
+79.23076923076923
+running reward: 0.00 at episode 93750
+103 7 13 123
+83.73983739837398
+running reward: 0.00 at episode 94000
+90 2 9 101
+89.10891089108911
+running reward: 0.00 at episode 94250
+87 1 8 96
+90.625
+running reward: 0.00 at episode 94500
+86 2 8 96
+89.58333333333334
+running reward: 0.00 at episode 94750
+85 2 6 93
+91.39784946236558
+running reward: 0.00 at episode 95000
+88 1 7 96
+91.66666666666666
+running reward: 0.00 at episode 95250
+WARNING:tensorflow:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+90 2 5 97
+92.78350515463917
+running reward: 0.00 at episode 95500
+94 2 6 102
+92.15686274509804
+running reward: 0.00 at episode 95750
+90 2 6 98
+91.83673469387756
+running reward: 0.00 at episode 96000
+86 1 7 94
+91.48936170212765
+running reward: 0.00 at episode 96250
+88 4 13 105
+83.80952380952381
+running reward: 0.00 at episode 96500
+87 1 9 97
+89.69072164948454
+running reward: 0.00 at episode 96750
+86 1 11 98
+87.75510204081633
+running reward: 0.00 at episode 97000
+82 5 11 98
+83.6734693877551
+running reward: 0.00 at episode 97250
+105 4 13 122
+86.0655737704918
+running reward: 0.00 at episode 97500
+96 2 12 110
+87.27272727272727
+running reward: 0.00 at episode 97750
+96 5 14 115
+83.47826086956522
+running reward: 0.00 at episode 98000
+98 6 12 116
+84.48275862068965
+running reward: 0.00 at episode 98250
+100 3 7 110
+90.9090909090909
+running reward: 0.00 at episode 98500
+98 3 7 108
+90.74074074074075
+running reward: 0.00 at episode 98750
+88 6 10 104
+84.61538461538461
+running reward: 0.00 at episode 99000
+89 2 7 98
+90.81632653061224
+running reward: 0.00 at episode 99250
+100 1 9 110
+90.9090909090909
+running reward: 0.00 at episode 99500
+99 5 11 115
+86.08695652173914
+running reward: 0.00 at episode 99750
+94 5 9 108
+87.03703703703704
+running reward: 0.00 at episode 100000
+90 6 8 104
+86.53846153846155
