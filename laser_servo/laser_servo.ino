@@ -5,16 +5,16 @@ Servo servoX, servoY;
 String input;
 int laserPin = 12;
 int laserState = LOW;
-
+int current_x=90, current_y=90;
 void setup() {
   servoX.attach(4);
   servoY.attach(2);
   pinMode(laserPin, OUTPUT);
   // attaches the servo on pin 9 to the servo object
   Serial.begin(9600);
-  Serial.setTimeout(10);
-  servoX.write(90);
-  servoY.write(90);
+  //Serial.setTimeout(10);
+  servoX.write(current_x);
+  servoY.write(current_y);
 }
 
 void loop() {
@@ -37,10 +37,28 @@ void serialEvent() {
   else{
     int x = getX(serialData);
     int y = getY(serialData);
-    Serial.println(x,y);
-    servoX.write(x);
-    // problem of servo getting lifted due to wire
-    servoY.write(y);
+    while(current_x<x) {
+      current_x++;
+      servoX.write(current_x);
+      delay(20);
+      Serial.print("current x: ");
+      Serial.println(current_x);
+    }
+    while(current_x>x) {
+      current_x--;
+      servoX.write(current_x);
+      delay(20);
+    }
+    while(current_y<y) {
+      current_y++;
+      servoY.write(current_y);
+      delay(20);
+    }
+    while(current_y>y) {
+      current_y--;
+      servoY.write(current_y);
+      delay(20);
+    }
   }
 }
 

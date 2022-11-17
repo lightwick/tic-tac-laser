@@ -6,6 +6,7 @@ import numpy as np
 import classification
 import time
 import tictactoe_ai as ai
+import arduino_control as arduino
 
 # TODO: should figure out a way for url to be fixed, or auto configured
 # url = "http://192.168.0.6:4747/mjpegfeed"
@@ -127,6 +128,7 @@ def main():
     ################### GRID DETECTION END ####################
 
     recent_send = time.time()
+    _recent = time.time()
     next_move = [-1,-1]
 
     prediction = [[' ' for i in range(3)] for j in range(3)] # prediction of markers of each cell
@@ -148,7 +150,7 @@ def main():
             _img = img[start_point[1]:end_point[1],start_point[0]:end_point[0]]
             
             # draw recognition rectangle
-            # cv2.rectangle(copy,  start_point, end_point, (200, 200, 0), 2)
+            cv2.rectangle(copy,  start_point, end_point, (200, 200, 0), 2)
 
             #cv2.imwrite(name, _img)
             # prediction of what's in the grid
@@ -179,6 +181,9 @@ def main():
             mid_point = (int((start_point[0]+end_point[0])/2), int((start_point[1]+end_point[1])/2))
             action_value = ai.get_action_value(prediction)[0]
             recent_send = time.time()
+            print(next_move[0], next_move[1])
+            arduino.send_coord(next_move[0], next_move[1])
+            
         elif number_of_blank%2==0:
             next_move = (-1,-1)
 
