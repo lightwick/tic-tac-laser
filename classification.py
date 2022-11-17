@@ -2,7 +2,7 @@ from keras.models import load_model
 import cv2
 import numpy as np
 
-model = load_model("./model.h5")
+model = load_model("./classification_model.h5")
 grid=[[-1 for i in range(3)] for j in range(3)]
 
 def preprocess_input(img):

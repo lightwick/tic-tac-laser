@@ -3,7 +3,7 @@ import os
 import image_processing as ip
 from time import sleep
 import numpy as np
-import detection
+import classification
 import time
 import tictactoe_ai as ai
 
@@ -152,7 +152,7 @@ def main():
 
             #cv2.imwrite(name, _img)
             # prediction of what's in the grid
-            cell_prediction = detection.get_prediction(_img)
+            cell_prediction = classification.get_prediction(_img)
 
             prediction[i//3][i%3] = cell_prediction
             mid_point = (int((start_point[0]+end_point[0])/2), int((start_point[1]+end_point[1])/2))
