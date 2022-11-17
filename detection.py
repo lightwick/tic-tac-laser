@@ -14,7 +14,7 @@ def preprocess_input(img):
     img = np.expand_dims(img, axis=0)
     return img.astype(np.float32) / 255
 
-mapping = {0:'None', 1:'X', 2:'O'}
+mapping = {0:' ', 1:'X', 2:'O'}
 
 def get_prediction(img):
     img = preprocess_input(img)
