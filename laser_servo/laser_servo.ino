@@ -26,19 +26,21 @@ void serialEvent() {
   String serialData = Serial.readString();
   // t for toggle
   Serial.println("received data: "+serialData);
-  if(serialData[0]=='t') {
-    if(laserState==LOW) laserState = HIGH;
-    else laserState = LOW;
-    
+  if(serialData=="on") {
+    laserState = HIGH;
     digitalWrite(laserPin, laserState);
   }
-  else {
+  else if (serialData=="off") {
+    laserState = LOW;
+    digitalWrite(laserPin, laserState);
+  } 
+  else{
     int x = getX(serialData);
     int y = getY(serialData);
     Serial.println(x,y);
     servoX.write(x);
     // problem of servo getting lifted due to wire
-    if(y>50) servoY.write(y);
+    servoY.write(y);
   }
 }
 

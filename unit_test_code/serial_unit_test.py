@@ -3,10 +3,16 @@ import serial
 from time import sleep
 from pynput import mouse
 
+laser_state = "off"
 def on_click(x, y, button, pressed):
+    global laser_state
     if button == mouse.Button.left:
         if pressed:
-            ser.write(b't')
+            if laser_state=="off":
+                laser_state="on"
+            elif laser_state=="on":
+                laser_state="off"
+            ser.write(bytes(laser_state, 'utf-8'))
         return True
     else:
         print("disabled key click")
